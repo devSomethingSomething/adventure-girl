@@ -1,7 +1,5 @@
 - Set up import settings for all the assets as needed
 
-- Add scrolling background
-
 - Create level
 
 - Add movement logic
