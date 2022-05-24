@@ -1,3 +1,14 @@
-- Add FPS controller
-
 - Set up import settings for all the assets as needed
+
+- Add scrolling background
+
+- Create level
+
+- Add movement logic
+- Add animations to movement
+
+- Add game UI
+
+- Add begin, restart and end states
+
+- Add scoring system
