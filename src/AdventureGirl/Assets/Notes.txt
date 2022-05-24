@@ -1,3 +1,6 @@
+Continue watching flappy bird tutorial
+Finish animation tutorial
+
 - Set up import settings for all the assets as needed
 
 - Create level
