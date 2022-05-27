@@ -15,6 +15,10 @@ public class EndController : MonoBehaviour
 
             collider2D.attachedRigidbody.velocity = Vector2.zero;
 
+            GameObject.FindObjectOfType<AnimationController>().Idle();
+
+            GameObject.FindObjectOfType<AnimationController>().canSetAnimations = false;
+
             GameObject.FindObjectOfType<GameManager>().WinGame();
         }
     }

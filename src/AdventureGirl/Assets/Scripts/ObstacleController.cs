@@ -15,6 +15,10 @@ public class ObstacleController : MonoBehaviour
 
             collider2D.attachedRigidbody.velocity = Vector2.zero;
 
+            GameObject.FindObjectOfType<AnimationController>().Dead();
+
+            GameObject.FindObjectOfType<AnimationController>().canSetAnimations = false;
+
             GameObject.FindObjectOfType<GameManager>().GameOver();
         }
     }

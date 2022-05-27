@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private bool canJump;
 
+    private bool hasStarted;
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -20,12 +22,18 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        hasStarted = false;
+
         AddStartingForce();
+
+        hasStarted = true;
     }
 
     private void AddStartingForce()
     {
         rigidbody2D.AddForce(Vector2.right * startingSpeed);
+
+        GameObject.FindObjectOfType<AnimationController>().Run();
     }
 
     private void Update()
@@ -38,6 +46,8 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && canJump)
         {
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+            GameObject.FindObjectOfType<AnimationController>().Jump();
 
             canJump = false;
         }
@@ -53,6 +63,11 @@ public class PlayerController : MonoBehaviour
         if (collision2D.gameObject.CompareTag("Ground"))
         {
             canJump = true;
+
+            if (hasStarted)
+            {
+                GameObject.FindObjectOfType<AnimationController>().Run();
+            }
         }
     }
 }
