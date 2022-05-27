@@ -1,11 +1,17 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static int score;
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
 
-    public static void IncreaseScore(int points)
+    private int score;
+
+    public void IncreaseScore(int points)
     {
         score += points;
+
+        scoreText.text = $"Score: {score}";
     }
 }
