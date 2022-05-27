@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0aa56945755af345be0eed4182a913e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingSpeed: 0
+  startingSpeed: 200
   jumpForce: 15
 --- !u!1 &632643933
 GameObject:
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 632643936}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

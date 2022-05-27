@@ -6,8 +6,6 @@ Finish animation tutorial
 - Create level
 
 - Add movement logic
-- Running
-- Jumping
 - Object detection
 - Start and end points of level
 - Falling out of map
