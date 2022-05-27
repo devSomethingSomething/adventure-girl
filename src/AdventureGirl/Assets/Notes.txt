@@ -13,5 +13,3 @@ Finish animation tutorial
 - Restart game
 
 - Add begin, restart and end states
-
-- Add scoring system
