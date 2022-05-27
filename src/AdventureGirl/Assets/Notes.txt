@@ -5,7 +5,6 @@ Finish animation tutorial
 
 - Create level
 
-- End points of level
 - Add animations to movement
 
 - Add game UI
