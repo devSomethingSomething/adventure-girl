@@ -7,9 +7,4 @@ Finish animation tutorial
 
 - Add animations to movement
 
-- Add game UI
-- Start game
 - End game
-- Restart game
-
-- Add begin, restart and end states

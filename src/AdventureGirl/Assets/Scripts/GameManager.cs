@@ -6,7 +6,8 @@ enum GameState
 {
     Start,
     InProgress,
-    End
+    End,
+    Win
 }
 
 public class GameManager : MonoBehaviour
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI gameOverText;
+
+    [SerializeField]
+    private TextMeshProUGUI winGameText;
 
     [SerializeField]
     private PlayerController playerController;
@@ -44,6 +48,8 @@ public class GameManager : MonoBehaviour
         StartGame();
 
         HandleGameOver();
+
+        HandleWinGame();
     }
 
     private void StartGame()
@@ -72,6 +78,23 @@ public class GameManager : MonoBehaviour
     private void HandleGameOver()
     {
         if (Input.anyKeyDown && gameState == GameState.End)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    public void WinGame()
+    {
+        gameState = GameState.Win;
+
+        scoreText.text = $"Final score: {score}";
+
+        winGameText.gameObject.SetActive(true);
+    }
+
+    private void HandleWinGame()
+    {
+        if (Input.anyKeyDown && gameState == GameState.Win)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
