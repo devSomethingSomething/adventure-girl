@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 enum GameState
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI startGameText;
+
+    [SerializeField]
+    private TextMeshProUGUI gameOverText;
 
     [SerializeField]
     private PlayerController playerController;
@@ -38,6 +42,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         StartGame();
+
+        HandleGameOver();
     }
 
     private void StartGame()
@@ -51,6 +57,23 @@ public class GameManager : MonoBehaviour
             playerController.enabled = true;
 
             gameState = GameState.InProgress;
+        }
+    }
+
+    public void GameOver()
+    {
+        gameState = GameState.End;
+
+        scoreText.text = $"Final score: {score}";
+
+        gameOverText.gameObject.SetActive(true);
+    }
+
+    private void HandleGameOver()
+    {
+        if (Input.anyKeyDown && gameState == GameState.End)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

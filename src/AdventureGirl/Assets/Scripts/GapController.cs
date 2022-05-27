@@ -12,6 +12,8 @@ public class GapController : MonoBehaviour
         if (collider2D.CompareTag("Player"))
         {
             Destroy(collider2D.gameObject);
+
+            GameObject.FindObjectOfType<GameManager>().GameOver();
         }
     }
 }
