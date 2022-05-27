@@ -5,10 +5,7 @@ Finish animation tutorial
 
 - Create level
 
-- Add movement logic
-- Object detection
-- Start and end points of level
-- Falling out of map
+- End points of level
 - Add animations to movement
 
 - Add game UI
