@@ -6,5 +6,3 @@ Finish animation tutorial
 - Create level
 
 - Add animations to movement
-
-- End game
