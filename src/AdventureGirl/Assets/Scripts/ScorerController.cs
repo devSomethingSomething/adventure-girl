@@ -11,7 +11,7 @@ public class ScorerController : MonoBehaviour
     {
         if (collider2D.CompareTag("Player"))
         {
-            GameManager.FindObjectOfType<GameManager>().IncreaseScore(10);
+            GameManager.FindObjectOfType<GameManager>().IncreaseScore(1);
         }
     }
 }
